@@ -3,17 +3,22 @@
 --[[ (C) 2020 Frank Hofmann --]]
 --[[ Using variables --]]
 
---[[ digit (integer) --]]
+--[[ nil --]]
+empty = nil
 
+--[[ boolean values --]]
+activatedBox = true
+isEmpty = false
+
+--[[ digits (floats) --]]
 amount = 15
-
---[[ digit (float) --]]
 tax_5 = 1.05
-tax_16 = 1.16
+tax_20 = 1.2
 
 --[[ string --]]
 item = "penguin"
 
-print("amount:  ", amount)
-print("tax 5%:  ", tax_5)
-print("tax 16%: ", tax_16)
+print("amount: ", amount)
+print("tax 5%: ", tax_5)
+print("tax 20%: ", tax_20)
+print("taxed amount: ", amount * tax_20)
