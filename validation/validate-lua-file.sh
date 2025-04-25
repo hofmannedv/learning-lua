@@ -12,13 +12,13 @@
 # -----------------------------------------------------------
 #
 # check for installation of lua-check
-if [[ -f /usr/bin/lua-check ]]
+if [[ -f /usr/bin/luacheck ]]
 then
     # check for command-line parameters
     if [[ "$#" -gt 0 ]]
     then
         # call lua-check with all given command-line parameters
-        lua-check "$@"
+        luacheck "$@"
         exit "$?"
     else
         # called without any command-line parameters
