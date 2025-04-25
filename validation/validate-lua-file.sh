@@ -12,14 +12,26 @@
 # -----------------------------------------------------------
 #
 # check for installation of lua-check
-# check for command-line parameters
-if [[ "$#" -gt 0 ]]
+if [[ -f /usr/bin/lua-check ]]
 then
-    # call lua-check with all given command-line parameters
-    lua-check "$@"
-    exit "$?"
+    # check for command-line parameters
+    if [[ "$#" -gt 0 ]]
+    then
+        # call lua-check with all given command-line parameters
+        lua-check "$@"
+        exit "$?"
+    else
+        # called without any command-line parameters
+        # return script with error 1
+        echo "called this script without any command-line parameters"
+        echo "exiting with error code 1"
+        exit 1
+    fi
 else
-    # called without any command-line parameters
+    # cannot find lua-check
     # return script with error 1
-    exit 1
+    echo "cannot find lua-check"
+    echo "exiting with error code 2"
+    exit 2
 fi
+   
