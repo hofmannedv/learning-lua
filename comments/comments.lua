@@ -1,6 +1,10 @@
 #!/usr/bin/lua
 
---[[ (C) 2021 Frank Hofmann --]]
+--[[ (C) 2021-2025 Frank Hofmann, Freiburg, Germany --]]
+--[[ email frank.hofmann@efho.de --]]
+
+--[[ License: GNU Public License (GPL) v.3.0 or later --]]
+--[[ SPDX-License-Identifier: GNU General Public License v3.0 or later --]]
 --[[ comments --]]
 
 -- simple comment (inline comment)
